@@ -24,7 +24,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="site-header">
-        <div className="container">
+        <div className="container header-inner">
           <h1 className="brand">Mon Portfolio - Data Science</h1>
           <nav>
             <a href="#/">Accueil</a>
@@ -43,7 +43,15 @@ export default function App() {
       </main>
 
       <footer className="site-footer">
-        <div className="container">© {new Date().getFullYear()} — Acsel Parsy</div>
+        <div className="container footer-inner">
+          <img
+            className="school-logo small"
+            src="/esiea.png"
+            alt="ESIEA"
+            onError={(e) => (e.currentTarget.src = '/LogoEsiea.png')}
+          />
+          <div className="copyright">© {new Date().getFullYear()} — Acsel Parsy</div>
+        </div>
       </footer>
     </div>
   )
