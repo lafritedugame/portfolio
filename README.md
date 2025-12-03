@@ -2,6 +2,36 @@
 
 
 
+# Portfolio
+
+Ce dépôt contient un squelette pour un portfolio orienté Data Science (React + Vite).
+
+Rappels et commandes rapides :
+
+Installation et développement (PowerShell) :
+
+```powershell
+npm install
+npm run dev
+```
+
+Build pour production :
+
+```powershell
+npm run build
+```
+
+Déploiement GitLab Pages :
+- Pousser sur la branche `main` (ou adapter `.gitlab-ci.yml`).
+- Le job `pages` construira et publiera le contenu.
+
+Fichiers créés : `index.html`, `package.json`, `src/` (React), `.gitlab-ci.yml`.
+
+Prochaines étapes recommandées :
+- Remplir les pages de projets (`src/pages/Projects.jsx`) avec chaque projet (contexte, rôle, tech, résultat).
+- Ajouter visualisations interactives exportées (Plotly) dans les pages projets.
+- Personnaliser le style et le contenu `src/styles.css`.
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
