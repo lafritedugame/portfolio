@@ -3,13 +3,15 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import CV from './pages/CV'
 
-const routeMap = {
+  const routeMap = {
   '': 'home',
   '#/': 'home',
   '#/projects': 'projects',
   '#/about': 'about',
-  '#/contact': 'contact'
+  '#/contact': 'contact',
+  '#/cv': 'cv'
 }
 
 export default function App() {
@@ -30,6 +32,7 @@ export default function App() {
             <a href="#/">Accueil</a>
             <a href="#/projects">Projets</a>
             <a href="#/about">À propos</a>
+            <a href="#/cv">CV</a>
             <a href="#/contact">Contact</a>
           </nav>
         </div>
@@ -39,6 +42,7 @@ export default function App() {
         {route === 'home' && <Home />}
         {route === 'projects' && <Projects />}
         {route === 'about' && <About />}
+        {route === 'cv' && <CV />}
         {route === 'contact' && <Contact />}
       </main>
 

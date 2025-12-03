@@ -1,0 +1,43 @@
+# Node
+node_modules/
+
+# Build outputs
+dist/
+.vite/
+
+# Local env files
+.env
+.env.*
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Test coverage
+coverage/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# Cache
+.cache/
+
+# Vite / bundler cache
+.turbo/
+.parcel-cache/
+
+# Generated / temporary public files
+public/cv.txt
+
+# Optional: lockfiles usually committed (uncomment to ignore)
+# package-lock.json
+# yarn.lock

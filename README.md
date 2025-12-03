@@ -32,6 +32,10 @@ Prochaines étapes recommandées :
 - Ajouter visualisations interactives exportées (Plotly) dans les pages projets.
 - Personnaliser le style et le contenu `src/styles.css`.
 
+CV / PDF
+- Dépose ton PDF de CV dans `public/cv.pdf` pour qu'il soit téléchargeable et intégré dans la page `#/cv`.
+- Si tu veux, je peux extraire le texte du PDF et convertir le contenu automatiquement en HTML (me le dire).
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
