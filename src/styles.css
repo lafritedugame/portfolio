@@ -28,6 +28,16 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 .lava-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;filter:blur(80px)}
 .lava-blob{position:absolute;border-radius:50%;mix-blend-mode:screen}
 
+/* Floating roses background */
+.rose-field{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.rose{position:absolute;top:0;mix-blend-mode:screen;transform:translate3d(0,110vh,0) scale(var(--scale,1)) rotate(var(--rotate,0deg));animation-name:rose-rise;animation-timing-function:linear;animation-iteration-count:infinite;will-change:transform,opacity;opacity:var(--opacity,0.6)}
+
+@keyframes rose-rise{
+  0%{transform:translate3d(var(--drift,0vw),110vh,0) scale(var(--scale,1)) rotate(var(--rotate,0deg));opacity:0}
+  10%{opacity:var(--opacity,0.6)}
+  100%{transform:translate3d(calc(var(--drift,0vw) + 10vw),-140vh,0) scale(var(--scale,1)) rotate(calc(var(--rotate,0deg) + 120deg));opacity:0}
+}
+
 /* Blob styles with adjusted opacity for transparency */
 .blob-1{width:180px;height:180px;background:rgba(0,80,160,0.25)}
 .blob-2{width:220px;height:220px;background:rgba(0,60,140,0.22)}

@@ -5,6 +5,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import CV from './pages/CV'
 import LavaBlobPhysics from './components/LavaBlobPhysics'
+import FloatingRoses from './components/FloatingRoses'
 
   const routeMap = {
   '': 'home',
@@ -28,6 +29,7 @@ export default function App() {
     <div className="app">
       {/* Physics-based lava lamp background */}
       <LavaBlobPhysics />
+      <FloatingRoses />
       <div className="lava-bg">
         <div className="lava-blob blob-1"></div>
         <div className="lava-blob blob-2"></div>
