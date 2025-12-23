@@ -16,8 +16,8 @@ export default function CV() {
 
         <h4 style={{color:'var(--text)',borderBottom:'2px solid var(--accent)',paddingBottom:4,marginTop:20}}>Contact</h4>
         <p style={{color:'var(--muted)'}}>
-          Téléphone: <strong style={{color:'var(--text)'}}>06.71.85.50.32</strong> • Email: <strong style={{color:'var(--text)'}}>parsy@et.esiea.fr</strong>
-          <br />Adresse: 7 Rue de la Baignade, 94400 Vitry-sur-Seine
+          Email: <strong style={{color:'var(--text)'}}>parsy@et.esiea.fr</strong>
+          <br />Adresse: Vitry-sur-Seine, France
         </p>
 
         <h4 style={{color:'var(--text)',borderBottom:'2px solid var(--accent)',paddingBottom:4,marginTop:20}}>Résumé</h4>

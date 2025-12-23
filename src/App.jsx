@@ -63,7 +63,14 @@ export default function App() {
 
       <header className="site-header">
         <div className="container header-inner">
-          <h1 className="brand">Mon Portfolio - Data Science</h1>
+          <div className="brand-section">
+            <img 
+              src="/photo-profile.png" 
+              alt="Acsel Parsy" 
+              className="brand-image"
+            />
+            <h1 className="brand">Portfolio - Acsel Parsy</h1>
+          </div>
           <nav>
             <a href="#/">Accueil</a>
             <a href="#/projects">Projets</a>

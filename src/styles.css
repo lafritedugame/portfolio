@@ -72,8 +72,9 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 .container{max-width:1080px;margin:0 auto;padding:24px 20px}
 .site-header{background:linear-gradient(135deg,rgba(10,26,38,0.95) 0%,rgba(13,24,33,0.95) 50%,rgba(42,8,19,0.15) 100%);border-bottom:1px solid rgba(0,212,255,0.1);position:sticky;top:0;z-index:20;backdrop-filter:blur(8px);box-shadow:0 2px 20px rgba(0,0,0,0.4)}
 .site-header .container{display:flex;align-items:center;justify-content:space-between}
-.brand{margin:12px 0;font-size:22px;font-weight:700;font-family:'Playfair Display',serif;letter-spacing:0.04em;position:relative;padding-left:50px}
-.brand::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:40px;height:40px;border:2px solid var(--text);border-radius:50%;background:radial-gradient(circle,rgba(0,212,255,0.08),transparent)}
+.brand-section{display:flex;align-items:center;gap:12px}
+.brand-image{width:45px;height:45px;border-radius:50%;object-fit:cover;border:2px solid var(--accent-bright);box-shadow:0 4px 12px rgba(0,212,255,0.15)}
+.brand{margin:12px 0;font-size:22px;font-weight:700;font-family:'Playfair Display',serif;letter-spacing:0.04em;position:relative}
 nav a{margin-left:14px;color:var(--text);text-decoration:none;font-weight:600;opacity:0.85}
 nav a:hover{opacity:1;color:var(--accent-bright)}
 .header-inner{display:flex;align-items:center;gap:12px}
@@ -138,6 +139,19 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 
 /* Make images and logos scale nicely */
 img{max-width:100%;height:auto}
+
+/* Disabled link styles */
+.disabled-link{
+  opacity: 0.4;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.disabled-link:hover{
+  opacity: 0.4;
+  cursor: not-allowed;
+  text-decoration: none;
+}
 
 /* About page layout */
 .about-container{display:flex;gap:32px;align-items:flex-start;margin-top:20px}

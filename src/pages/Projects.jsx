@@ -4,49 +4,37 @@ import React, { useEffect, useRef, useState } from 'react'
 const projects = [
   {
     id: 1,
-    title: 'Optimisation des interventions terrain',
-    summary: 'Prédire les créneaux disponibles et générer automatiquement les rendez-vous techniciens.',
-    challenge: 'Agenda technicien saturé, annulations et rendez-vous mal séquencés.',
-    approach: 'Features horaires + géoloc, modèle de prédiction des durées, API FastAPI pour la génération de slots, stockage PostgreSQL.',
-    stack: 'Python, scikit-learn, FastAPI, PostgreSQL',
-    impact: '–15 % de temps de planification et +8 % de taux de complétion.',
-    tags: ['ML', 'API', 'Ops'],
-    code: '#',
+    title: 'Thermonova',
+    summary: 'Application de diagnostic et d\'optimisation thermique pour logements.',
+    challenge: 'La plupart des logements souffrent d\'une distribution thermique inefficace. Le défi consiste à déterminer le placement optimal et la puissance des radiateurs pour assurer une chauffe uniforme et confortable dans toutes les pièces, tout en réduisant la consommation énergétique.',
+    approach: 'En équipe de six, nous avons développé une application multiplateforme en Flutter/Dart permettant aux utilisateurs de saisir facilement les caractéristiques de leur logement. Nous avons récupéré les données de chauffage disponibles et les aides à la rénovation via une API Django, puis implémenté un algorithme d\'optimisation pour déterminer le placement idéal. Les données sont stockées de manière sécurisée en GeoJSON via API distante et SQLite localement.',
+    stack: 'Flutter/Dart, Django, SQLite, GeoJSON API',
+    impact: 'Le prototype en cours de développement offre une solution personnalisée pour l\'optimisation thermique basée sur la géométrie réelle et les caractéristiques uniques de chaque logement, permettant aux utilisateurs de prendre des décisions éclairées sur leurs installations de chauffage.',
+    tags: ['Flutter', 'Backend', 'Optimization'],
+    code: 'https://gitlab.esiea.fr/t404/flutter-app',
     demo: '#'
   },
   {
     id: 2,
-    title: 'Analyse de tickets et routage NLP',
-    summary: 'Classification/priorisation automatique des tickets support.',
-    challenge: "Temps de tri manuel élevé et erreurs d'aiguillage.",
-    approach: 'Nettoyage texte, embeddings + TF-IDF, classification multi-classes, Streamlit pour le routage et la priorisation.',
-    stack: 'Python, spaCy, scikit-learn, Streamlit',
-    impact: 'Macro-F1 0.87, –30 % de temps de tri manuel.',
-    tags: ['NLP', 'Classification'],
+    title: 'Sales Analytics Pipeline',
+    summary: 'Pipeline d\'extraction et d\'analyse de données commerciales pour suivi des performances.',
+    challenge: 'Les équipes commerciales avaient besoin de comprendre les tendances de vente en analysant les données de rendez-vous d\'installation. Le défi était d\'automatiser l\'extraction, le nettoyage et l\'analyse de ces données pour générer des insights exploitables sans intervention manuelle répétée.',
+    approach: 'J\'ai conçu un pipeline Python automatisé qui utilise l\'API Google Calendar pour récupérer les données de rendez-vous en temps réel. Le système traite et enrichit les données, effectue des comparaisons mensuelles et annuelles, puis génère des visualisations professionnelles avec Matplotlib et des rapports détaillés en Excel que les équipes peuvent facilement explorer.',
+    stack: 'Python, Google Calendar API, Matplotlib, Excel',
+    impact: 'Le dashboard analytique resultant facilite considérablement le suivi des performances commerciales et l\'identification des tendances saisonnières, permettant aux décideurs de réagir rapidement aux variations du marché et d\'optimiser les stratégies de vente.',
+    tags: ['Data', 'Analytics', 'Python'],
     code: '#',
     demo: '#'
   },
   {
     id: 3,
-    title: 'Prévision de consommation énergétique',
-    summary: "Anticiper les pics et piloter l'optimisation énergétique.",
-    challenge: "Variabilité forte et besoin de recommandations actionnables.",
-    approach: "Décomposition des séries, Prophet + baselines, détection de pics, dashboard Plotly pour scénarios d'effacement.",
-    stack: "Python, Prophet, Pandas, Plotly",
-    impact: "MAPE < 6 %, recommandations visuelles pour lissage des pics.",
-    tags: ['Time Series', 'Forecast'],
-    code: '#',
-    demo: '#'
-  },
-  {
-    id: 4,
-    title: 'Tableau de bord visites & conversion',
-    summary: 'Suivi du parcours utilisateur et des KPIs marketing avec alertes.',
-    challenge: 'Identifier les points de friction et réagir vite sur les campagnes.',
-    approach: "Collecte événements, agrégations funnel, visualisations Plotly, alertes sur seuils de conversion.",
-    stack: "React, Plotly, Node/Express",
-    impact: "+12 % de conversion après déclenchement d'actions ciblées.",
-    tags: ['Analytics', 'Viz'],
+    title: 'JP no Uta',
+    summary: 'Lecteur de musique avec recherche intelligente et téléchargement concurrent.',
+    challenge: 'L\'objectif était de créer un lecteur MP3 intuitif capable de rechercher et télécharger de la musique avec ses paroles et pochettes d\'album, sans jamais interrompre la lecture ni bloquer l\'interface utilisateur, même lors de téléchargements simultanés.',
+    approach: 'En équipe de trois personnes, nous avons implémenté une architecture Python exploitant le multithreading pour gérer les opérations de téléchargement et de lecture en parallèle. Nous avons conçu une application acceptant des recherches vocales ou textuelles, consommant une base de données relationnelle pour stocker les musiques, paroles et préférences utilisateur, tout en maintenant une interface réactive grâce à une gestion asynchrone sophistiquée des tâches.',
+    stack: 'Python, Multithreading, Base de données relationnelle',
+    impact: 'Le lecteur offre une expérience utilisateur exceptionnellement fluide : la musique continue de jouer sans interruption, l\'interface reste toujours réactive aux interactions, et les téléchargements se font de manière transparente en arrière-plan, même lors de téléchargements volumineux.',
+    tags: ['Audio', 'Python', 'Multithreading'],
     code: '#',
     demo: '#'
   }
@@ -140,8 +128,30 @@ export default function Projects() {
 
               {isExpanded && (
                 <div className="card-actions">
-                  <a href={p.demo}>Démo</a>
-                  <a href={p.code}>Code</a>
+                  <a 
+                    href={p.demo} 
+                    onClick={(e) => p.demo === '#' && e.preventDefault()}
+                    style={{
+                      opacity: p.demo === '#' ? 0.4 : 1,
+                      cursor: p.demo === '#' ? 'not-allowed' : 'pointer',
+                      pointerEvents: p.demo === '#' ? 'auto' : 'auto'
+                    }}
+                    className={p.demo === '#' ? 'disabled-link' : ''}
+                  >
+                    Démo
+                  </a>
+                  <a 
+                    href={p.code} 
+                    onClick={(e) => p.code === '#' && e.preventDefault()}
+                    style={{
+                      opacity: p.code === '#' ? 0.4 : 1,
+                      cursor: p.code === '#' ? 'not-allowed' : 'pointer',
+                      pointerEvents: p.code === '#' ? 'auto' : 'auto'
+                    }}
+                    className={p.code === '#' ? 'disabled-link' : ''}
+                  >
+                    Code
+                  </a>
                 </div>
               )}
             </article>
