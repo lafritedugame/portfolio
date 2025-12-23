@@ -29,7 +29,7 @@ export default function FloatingRoses() {
       {roses.map((rose) => (
         <img
           key={rose.id}
-          src="/rose_no_bg.svg"
+          src={`${import.meta.env.BASE_URL}rose_no_bg.svg`}
           alt=""
           className="rose"
           style={{

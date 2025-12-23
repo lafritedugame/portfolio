@@ -38,22 +38,22 @@ export default function FloatingSVGLayer() {
     <div ref={containerRef} className="floating-svg-layer">
       {/* SVG elements positioned at different spots */}
       <div className="floating-svg" style={{ top: '10%', left: '5%' }}>
-        <img src="/rose_no_bg.svg" alt="rose" />
+        <img src={`${import.meta.env.BASE_URL}rose_no_bg.svg`} alt="rose" />
       </div>
       <div className="floating-svg" style={{ top: '20%', right: '8%' }}>
-        <img src="/rose_no_bg.svg" alt="rose" />
+        <img src={`${import.meta.env.BASE_URL}rose_no_bg.svg`} alt="rose" />
       </div>
       <div className="floating-svg" style={{ bottom: '15%', left: '12%' }}>
-        <img src="/rose_no_bg.svg" alt="rose" />
+        <img src={`${import.meta.env.BASE_URL}rose_no_bg.svg`} alt="rose" />
       </div>
       <div className="floating-svg" style={{ bottom: '10%', right: '5%' }}>
-        <img src="/rose_no_bg.svg" alt="rose" />
+        <img src={`${import.meta.env.BASE_URL}rose_no_bg.svg`} alt="rose" />
       </div>
       <div className="floating-svg" style={{ top: '50%', left: '8%' }}>
-        <img src="/rose_no_bg.svg" alt="rose" />
+        <img src={`${import.meta.env.BASE_URL}rose_no_bg.svg`} alt="rose" />
       </div>
       <div className="floating-svg" style={{ top: '60%', right: '10%' }}>
-        <img src="/rose_no_bg.svg" alt="rose" />
+        <img src={`${import.meta.env.BASE_URL}rose_no_bg.svg`} alt="rose" />
       </div>
     </div>
   )

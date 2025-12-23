@@ -8,7 +8,7 @@ export default function About() {
       <div className="about-container">
         <div className="about-photo">
           <img 
-            src="/photo-profile.png" 
+            src={`${import.meta.env.BASE_URL}photo-profile.png`} 
             alt="Acsel Parsy"
             className="profile-picture"
           />

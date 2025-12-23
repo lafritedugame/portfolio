@@ -65,7 +65,7 @@ export default function App() {
         <div className="container header-inner">
           <div className="brand-section">
             <img 
-              src="/photo-profile.png" 
+              src={`${import.meta.env.BASE_URL}photo-profile.png`} 
               alt="Acsel Parsy" 
               className="brand-image"
             />
@@ -93,9 +93,9 @@ export default function App() {
         <div className="container footer-inner">
           <img
             className="school-logo small"
-            src="/esiea.png"
+            src={`${import.meta.env.BASE_URL}esiea.png`}
             alt="ESIEA"
-            onError={(e) => (e.currentTarget.src = '/LogoEsiea.png')}
+            onError={(e) => (e.currentTarget.src = `${import.meta.env.BASE_URL}LogoEsiea.png`)}
           />
           <div className="copyright">© {new Date().getFullYear()} — Acsel Parsy</div>
         </div>

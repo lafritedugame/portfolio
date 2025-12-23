@@ -7,7 +7,7 @@ export default function CV() {
       <p>Version HTML extraite automatiquement du PDF — le fichier PDF est disponible au téléchargement.</p>
 
       <div style={{marginTop:12, marginBottom:18}}>
-        <a className="button" href="/cv.pdf" target="_blank" rel="noreferrer">Télécharger le PDF</a>
+        <a className="button" href={`${import.meta.env.BASE_URL}cv.pdf`} target="_blank" rel="noreferrer">Télécharger le PDF</a>
       </div>
 
       <div style={{border:'1px solid rgba(0,212,255,0.15)',background:'rgba(13,24,33,0.6)',padding:24,borderRadius:16,backdropFilter:'blur(8px)'}}>
